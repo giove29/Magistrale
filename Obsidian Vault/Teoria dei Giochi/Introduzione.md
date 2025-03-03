@@ -1,4 +1,4 @@
-Slide su Moodle.
+ Slide su Moodle.
 
 **Gioco**: scenario in cui i partecipanti (players) interagiscono, in cui il risultato per ciascun partecipante dipende dalla scelta di tutti.
 - N. giocatori: qualunque.
@@ -54,3 +54,7 @@ Equilibrio: ogni giocatore utilizza le strategie migliori in risposta agli altri
 Evolutionary Games: crolla il presupposto che tutti i giocatori siano razionali.
 
 **Obiettivo della Teoria dei Giochi**: Effettuare previsioni su cosa i giocatori faranno e come si raggiungerà l'equilibrio nel gioco. Può essere inoltre utilizzato per massimizzare il proprio payoff.
+
+
+Risoluzione dei Giochi: dipende dal tipo di Gioco.
+Inizieremo con lo studiare giochi sequenziali e poi simultanei!
