@@ -90,3 +90,55 @@ Reciproco della totale distanza tra un nodo $n$ e tutti gli altri nodi. Rapprese
 
 ### Betweenness Centrality
 Rapporto tra il numero di shortest paths che passano per un dato nodo $n$ e il numero totale di shortest paths del grafo. Rappresenta quanto un nodo è fondamentale per i paths del grafo.
+
+---
+# Community Detection
+> **Community**: porzione di grafo con alta connettività interna.
+
+## Girvan-Newman Algoritmo
+Questo algoritmo ha lo scopo di identificare e analizzare la struttura delle comunità presenti in un grafo. 
+L'algoritmo si basa sull'eliminazione iterativa di edges che hanno il più alto numero di shortest paths, o anche con maggiore valore di Betweenness Centrality. 
+Rimuovendo questi archi, la rete si scompone in piccoli parti chiamate **comunità**.
+Passi dell'algoritmo:
+- Calcolare la betweenness degli archi.
+- Eliminare gli archi con betweenness più alta.
+- I componenti connessi della rete sono comunità.
+![[Pasted image 20250305143750.png]]
+![[Pasted image 20250305143813.png|330]]
+
+
+> [!NOTE] Non-overlapping vs. overlapping communities
+> ![[Pasted image 20250305144909.png]]
+
+
+## Graph Partitioning
+> **Graph Cut**: numero di archi che vanno da G1 a G2 (visto nella formula della conduttanza).
+
+Se vogliamo dividere il grafo in 2 parti, vogliamo minimizzare il numero di archi da rimuovere e ottenere le due parti "densamente connesse".
+Vogliamo quindi minimizzare: ![[Pasted image 20250305144633.png]]
+
+![[Pasted image 20250305144746.png]]
+
+**In-Degree Prestige**: numero di archi entranti nel nodo $i$.
+**Influence Domain**: numero di nodi che possono raggiungere il nodo $i$.
+## Proximity Prestige (grafi diretti)
+> Considerare l'importanza di un nodo in base al numero di archi entranti (in-degree).
+
+La Proximity Prestige è una misura di centralità che valuta la popolarità del nodo e la misura di quanto velocemente può essere raggiunto.
+
+Un nodo con alta Proximity Prestige è raggiungibile da molti altri nodi con poche connessioni intermedie.
+![[Pasted image 20250305145439.png]]
+dove:
+- |$Ii$| è il numero di nodi che raggiungo il nodo $i$ con un percorso diretto.
+- $(n-1)$ numero degli altri nodi nel grafo (escluso $i$).
+- $d(i,j)$ lunghezza dello shortest path diretto da $j$ a $i$.
+![[Pasted image 20250305145714.png]]
+PP(1) = (9/9) / (1+1+1+2+2+2+2+3+4)/9 = 0.5
+PP(8) = (2/9) / (1+2)/2 = 0.148
+
+## Misura di Impatto: H-Index
+> Considera l'importanza di un nodo in base alla produttività e all'impatto.
+
+L'H-Index di un nodo si basa sul numero di connessioni in ingresso (in-degree) e sulle centralità dei nodi che lo citano. Non basta avere tanti archi entranti, bisogna essere collegati a nodi che a loro volta hanno un alto in-degree.
+
+Un nodo con alto H-Index è raggiunto da molti nodi influenti.
