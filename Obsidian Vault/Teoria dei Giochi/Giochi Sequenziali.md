@@ -33,6 +33,10 @@ Strategia Minerva -> Minerva ha 2 possibili scelte nei 3 possibili nodi. Le sue 
 - {N.b, E.a, S.b}
 - {N.b, E.b, S.b}
 
+**Applicato il rollback**:
+Strategia Albus in equilibrio -> N
+Strategia Minerva in equilibrio -> {N.b, E.a, S.b}
+
 
 ---
 
@@ -58,6 +62,13 @@ Strategia Minerva -> 6 totali combinazioni
 **Esercizio 21 Flags**
 Il gioco è giocato da 2 partecipanti e ad ogni turno ciascun giocatore toglie da 1 a 3 bandiere dalle 21 totali iniziali.
 
+---
+
+**Esercizio 21 Matchsticks**
+Ci sono 21 matchsticks da rimuovere tra 2 giocatori, a turno possono rimuoverli da 1 a 4 matchsticks alla volta. Vince chi toglie l'ultimo matchstick vince.
+Possiamo risolverlo con l'albero e utilizzano la Rollback, ma l'albero verrebbe abbastanza grande. Possiamo quindi semplificarlo simulando lo stesso gioco con 6 matchsticks iniziali, il primo che gioca e ne toglie solo 1 lasciando il secondo giocatore con 5 ha vinto.
+Capiamo che il primo giocatore deve togliere tanti matchsticks per lasciare all'altro un multiplo di 5, perché la scelta massima dell'altro è 4.
+Nel gioco di 21 vince sempre il primo se fa la mossa giusta potendo lasciare l'altro sempre a multipli di 5 fino all'ultimo turno in cui vince.
 
 ---
 
@@ -90,3 +101,7 @@ Ciascun giocatore ha 4 tipi di scenari:
 Il gioco essendo sequenziale prevede in ordine le scelte di Emily, Nina e Talia.
 Schema dal blocco di slide che deve ancora uscire.
 Ogni giocatrice sceglie il ramo che la porta al suo payoff migliore in ogni caso in cui si può trovare.
+##### Da notare
+Nei giochi sequenziali bisogna analizzare anche se l'ordine con cui i partecipanti giocano influisce sul payoff.
+
+Guarda l'Ultimate Game che dovrebbe essere 

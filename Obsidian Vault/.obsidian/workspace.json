@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Graph Analytics/Graph Importance.md",
+                "file": "Teoria dei Giochi/Giochi Sequenziali.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Graph Importance"
+              "title": "Giochi Sequenziali"
             }
           }
         ]
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Esplora risorse"
             }
           },
           {
@@ -160,19 +160,20 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false
     }
   },
   "active": "bc3554e8ae456640",
   "lastOpenFiles": [
-    "Pasted image 20250305152044.png",
-    "Graph Analytics/Graph Traversal.md",
     "Graph Analytics/Graph Importance.md",
+    "Graph Analytics/Graph Traversal.md",
+    "Teoria dei Giochi/Giochi Sequenziali.md",
+    "Pasted image 20250305152044.png",
     "Pasted image 20250305145714.png",
     "Pasted image 20250305145439.png",
     "Pasted image 20250305144909.png",
@@ -182,11 +183,9 @@
     "Pasted image 20250305143750.png",
     "Teoria dei Giochi/Lavorare con Probabilità.md",
     "Teoria dei Giochi/Introduzione.md",
-    "Teoria dei Giochi/Giochi Sequenziali.md",
     "Sistemi Complessi/Senza nome.md",
     "Pasted image 20250304123815.png",
     "Pasted image 20250304123609.png",
-    "Pasted image 20250304122448.png",
     "Sicurezza Informatica",
     "Sistemi Complessi",
     "Graph Analytics",
