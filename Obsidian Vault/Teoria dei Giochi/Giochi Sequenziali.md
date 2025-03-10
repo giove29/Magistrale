@@ -102,6 +102,61 @@ Il gioco essendo sequenziale prevede in ordine le scelte di Emily, Nina e Talia.
 Schema dal blocco di slide che deve ancora uscire.
 Ogni giocatrice sceglie il ramo che la porta al suo payoff migliore in ogni caso in cui si può trovare.
 ##### Da notare
-Nei giochi sequenziali bisogna analizzare anche se l'ordine con cui i partecipanti giocano influisce sul payoff.
+- Nei giochi sequenziali bisogna analizzare anche se l'ordine con cui i partecipanti giocano influisce sul payoff.
+- Nei giochi sequenziali è importante analizzare anche gli effetti in seguito all'aggiunta di più giocatori e/o più regole al gioco (gioco dei leoni).
+	- In alcuni giochi, aggiungere un giocatore possiamo ottenere un nuovo equilibrio totalmente diverso nel gioco.
 
-Guarda l'Ultimate Game che dovrebbe essere 
+Guarda l'Ultimate Game!
+
+## Nim Theory
+Considerando il gioco già visto:
+- ci sono 10 bastoncini.
+- ciascun giocatore può rimuovere da 1 a 3 bastoncini.
+- chi rimuove l'ultimo vince.
+Definiamo n stati in base a quanti bastoncini rimangono.
+States: 0, 1, 2, 3, ... n.
+Definiamo inoltre:
+- Winning States: il giocatore che si trova in questi stati vince se gioca razionalmente.
+	- 1
+	- 2
+	- 3
+- Loosing States: il giocatore che si trova in questi stati perde se l'avversario gioca razionalmente.
+	- 0
+	- 4
+> Per vincere devo portare il mio avversario in un stato perdente.
+> ![[Pasted image 20250310173747.png]]
+
+**Divisibility Game**
+In ogni stato $k$, il giocatore è in grado di rimuove un numero $x$ di bastoncini tale per cui $x<k$ e $x$ si divisore di $k$. (Nello stato 8 posso rimuovere 1,2,4 bastoncini; nello stato 7 posso rimuovere solo 1).
+Perde chi arriva ad un bastoncini rimasto perché non può rimuoverlo.
+> In questo gioco il pattern è:
+> - Stati perdenti: dispari.
+> - Stati vincenti: pari.
+
+### Nim Game
+Ci sono $n$ heap contenenti $x_i$ bastoncini. Ogni turno un giocatore può rimuovere quanti bastoncini vuole da un sono heap.
+\[$x_1$, $x_2$, $x_3$\] -> \[10, 12, 5]
+Loosing state -> \[0, 0, 0]
+**nim sum** = $x_1$ xor $x_2$ xor $x_3$ 
+*(ricorda che lo xor da risultato 1 se i due valori sono diversi, 0 se sono uguali; può essere concatenato perché associativa)*
+
+> La Nim Theory ci dice che gli stati con **nim sum** = 0 sono stati perdenti, mentre tutti gli altri sono vincenti.
+
+Nel caso di \[10, 12, 5]
+![[Pasted image 20250310175444.png]]
+Il giocatore che si trova nello stato attuale deve fare in modo che la **nim sum** sia = 0.
+- Per capire da quale heap rimuovere i bastoncini: devo guardare quale heap contiene un "1" nelle colonna corrispondente all' "1" più significativo (più a sx) nella nim sum.
+	- Nel nostro caso: la terza colonna ha un "1" in corrispondenza del primo heap.
+- Per capire quanto rimuovere dall'heap individuato: devo arrivare al numero ottenuto facendo lo xor tra heap e nim sum.
+	- Nel nostro caso: 10 xor 3 = 9. Quindi tolgo un bastoncino dal primo heap per lasciarne 9.
+![[Pasted image 20250310175859.png|100]]
+
+---
+## Grundy Numbers
+Possiamo utilizzare la Nim Theory in questo gioco, applicando una trasformazione e interpretazione degli stati per avere dei numeri per ciascun heap.
+E' possibile associare a ciascuno stato un valore che indica se lo stato è vincitore o perdente (solitamente se stato = 0 -> stato perdente).
+Utilizziamo il "mex", ovvero a partire dallo stato 0 calcolo il valore degli altri stato applicando la funzione "mex". Associo allo stato il valore minimo (>0) che non è compreso negli stati in cui posso muovermi.
+- Esempio: se sono su uno stato in cui posso muovermi su "1" e "0", il valore del mex=2.
+- Se posso muovermi su "1", allora il mex=0.
+
+Utilizzeremo la nim sum nel caso in cui ci sono più sub-games, per comprendere se lo stato collettivo è vincente, e come muoversi razionalmente verso la "vittoria" (esercizio in cui ci sono 3 quadrati in cui è possibile muoversi, ciascuno dei quali può avere lo stesso significato degli heap in cui è possibile capire in quale heap muoversi).
