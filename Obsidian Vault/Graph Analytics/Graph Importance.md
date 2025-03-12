@@ -107,17 +107,88 @@ La matrice Bibliografica opera secondo principi simili a quelli della Co-citazio
 - $Bii$ rappresenta il numero di citazioni del nodo $i$ (out-degree).
 - $Bij$ rappresenta il numero di articoli che sono citano da entrambi $i$ e $j$.
 	- Esempio: $Bde$ = 2 -> indica che ci sono due articoli che sono citati sia da $d$ che da $e$ {$a$, $b$}.
+
+---
+
 # HITS: Hypertext Induced Topic Search
 Si tratta di un algoritmo di analisi dei link come alternativa all'approccio di Page-Rank (contesto: pagine WEB e link).
+1. HITS espande la lista di pagine rilevanti.
+2. In seguito produce 2 rankings al set di pagine, Autorità e Hub ranking.
+	- **Autorità**: una pagina autoritaria è una pagina con molti link entranti.
+	- **Hub**: un hub è una pagina con molti link uscenti.
 
 HITS assegna 2 valori a ciascuna pagina:
-- Authority Score: Misura il valore del contenuto della pagina stessa.
-- Hub Score: misura il valore dei link della pagina ad altre pagine.
+- **Authority Score**: Misura il valore del contenuto della pagina stessa. Si tratta di pagine che hanno buoni e contenuti autorevoli nelle quali molti pagine si fidano e si collegano.
+- **Hub Score**: Misura il valore dei link della pagina ad altre pagine. Si tratta di pagine che servono come organizzatori di informazioni autorevoli per determinati argomenti.
 
-Rafforzamento reciproco delle relazioni:
+**Rafforzamento reciproco delle relazioni**:
 Il core di HITS sta nel rafforzamento reciproco delle relazioni tra Hubs e Autorità:
 - Buone autorità sono pagine che sono connesse a molti buoni hub.
 - Buoni hub sono pagine che sono connesse a molte buone autorità.
 
+**Procediamo iterativamente**:
+- Per prima cosa al tempo $t_0$, assegnamo Authority score e Hub score a tutti i nodi pari a $1/rad(N)$.
+- Successivamente, dal tempo $t_0$ a $t_1$, accumuliamo lo score da ciascuna autorità ad ogni hub, e da ciascun hub ad ogni autorità.
+Ripetiamo il processo fino a $t_i$, aggiornando i valori ad ogni step.
 
+**Formula con Matrice**:
+- $n$ pagine.
+- Utilizziamo 2 vettori per rappresentare gli score:
+	- Authority Score: $a = (a_1, a_2 ... a_n)$
+	- Hub Score: $h = (h_1, h_2 ... h_n)$
+- Matrice di adiacenza $A$ (chiamata anche Link matrix del Web)
+- **Fino a convergenza**:
+	- $h = A * a$
+	- $a = A^T * h$
 
+---
+
+# Page Rank
+Page Rank è un algoritmo che misura l'importanza dei nodi in un grafo, analizzando la struttura dei link tra di essi. Ha rivoluzionato la ricerca Web perchè in grado di determinare quali pagine hanno maggior valore.
+
+Concetto di base: 
+Una pagina è importante se riceve link da altre pagine importanti. Questo crea una definizione ricorsiva nella quale l'importanza di una pagina dipende dall'importanza delle pagine ad essa collegate.
+- La pagina $j$ con importanza $r_j$ ha $n$ out-links, ciascuno dei suoi link avrà $r_j/n$ voti (voti provenienti da pagine con molti voti, valgono di più.)
+- L'importanza della pagina $j$ si calcola come la somma di tutti i voti ottenuti dai suoi in-links.
+![[Pasted image 20250312130932.png|200]]
+$Rank(B) = Rank(C)/4 + Rank(E)/3 + Rank(F)/2$
+
+**Formula con Matrice**:
+- Matrice stocastica di adiacenza $M$ (le colonne sommano 1).
+- Vettore $r$ per rappresentare il rank di ciascuna pagina -> $r = [1/N, 1/N ...]$
+- **Fino a convergenza**:
+	- $r^1 = M * r^0$
+	- Ci si ferma quando $|r^1 - r^0| < e$, ovvero quando tra un'iterazione e l'altra la variazione del vettore è minima.
+
+**Power Iteration**: Il processo di iterare fino ad una convergenza o una variazione tollerabile per il Page Rank, lo definiamo Power Iteration
+
+#### Stationary Distribution
+Si tratta del risultato finale ottenuto dalla Power Iteration. Descrive una distribuzione delle probabilità lungo le pagine, iniziando da un nodo random con quale probabilità mi trovo sul nodo $x$?
+
+**Condizioni di Esistenza e Unicità della Stationary Distribution in processi Markov**
+- La matrice di transizione è una matrice stocastica: tutte le colonne sommano 1.
+- La matrice è irriducibile: il grafo è fortemente connesso (ciascun nodo può essere raggiunto da ogni nodo).
+- La matrice è aperiodica: è possibile tornare indietro ad un nodo in un numero fissato di step.
+
+**PROBLEMA!!**
+![[Pasted image 20250312133748.png]]
+Nel caso di grafi con Dead end e/o Spider trap, non è possibile ottenere una Stationary Distribution!
+
+**SOLUZIONE!!**
+Possiamo trasformare la Matrice delle transizioni facendo in modo che, anche in presenza di Dead end o Spider trap, sia sempre possibile raggiungere un qualsiasi nodo da ogni nodo. 
+Come fare?
+Aggiungiamo un link da ogni pagina che arriva ad ogni pagina e gli assegnamo una piccola probabilità di transizione.
+Esattamente come se stessimo introducendo la **Teleport Probability** nel grafo!
+
+---
+
+# Page Rank Personalizzato: Topic Specific Page Rank
+
+> Page Rank misura una generica popolarità di una pagina, non è specifica per una search query o un argomento.
+
+**Obiettivo**: Valutare le pagine Web in base a quanto sono vicini ad un particolare argomento (sport, storia...).
+**Idea**: Ora consideriamo il Teleport Probability ad una pagina random non uniformemente.
+- Quando un visitatore effettua un Teleport, sceglie da un set di pagine $S$.
+- Il set $S$ contiene solo pagine che sono rilevanti per un argomento.
+- Per ciascuna Teleport Probability del set $S$, abbiamo un vettore differente $r_S$.
+![[Pasted image 20250312141140.png]]
