@@ -35,6 +35,43 @@ VS
 
 **3. Path**: rappresentazioni di percorsi.
 
+> I primi 2 punti sono rappresentabili sia con Relational che con Graph DB, il Graph permette vantaggi computazionali; mentre per il terzo punto, esso è rappresentabile solo attraverso il Graph DB
+
 ---
 
 # Tipi di Graph DB
+**Property Graph Database**
+Contiene dati sotto forma di nodi e archi, e permette di specificare proprietà per entrambi.
+![[Pasted image 20250314122502.png]]
+
+**Resource Description Framework (RDF) Graph Database**
+Rappresenta i dati come una tripla tupla composta da un soggetto, un predicato e un oggetto.
+![[Pasted image 20250314122441.png]]
+
+**Hypergraph Database**
+Contiene nodi e hyperarchi (hyperedges); gli hyperarchi connettono qualunque numero di nodi alla volta.
+![[Pasted image 20250314123118.png]]
+
+**Spatial Graph Database**
+Permette di contenere e interrogare nodi spaziali, come mappe, coordinate GPS. I nodi rappresentano locazioni e gli archi rappresentano le relazioni. Supportano indexing spaziale e interrogazioni spaziali.
+![[Pasted image 20250314123137.png]]
+
+**Temporal Graph Database**
+Permette di contenere e interrogare dati con una dimensione temporale come per event logs. I nodi rappresentano entità, e gli archi rappresentano relazioni tra queste entità in specifici momenti temporali.
+![[Pasted image 20250314123158.png|300]]
+
+**Property-Graph / Triplestore**
+Un Graph DB che combina le caratteristiche di entrambi Property Graph e RDF.
+![[Pasted image 20250314123223.png|300]]
+
+---
+## Strumenti di modellazione
+**GQL Standard**: è il linguaggio standard proposto per l'interrogazione di grafi (Aprile 2024).
+- Neo4j
+- Thinkerpop
+- GraphQL
+- Cypher (linguaggio che vedremo di più, più standard).
+- Gremlin
+
+#### Neo4j
+![[Pasted image 20250314125221.png|450]]
