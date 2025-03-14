@@ -160,3 +160,5 @@ Utilizziamo il "mex", ovvero a partire dallo stato 0 calcolo il valore degli alt
 - Se posso muovermi su "1", allora il mex=0.
 
 Utilizzeremo la nim sum nel caso in cui ci sono più sub-games, per comprendere se lo stato collettivo è vincente, e come muoversi razionalmente verso la "vittoria" (esercizio in cui ci sono 3 quadrati in cui è possibile muoversi, ciascuno dei quali può avere lo stesso significato degli heap in cui è possibile capire in quale heap muoversi).
+
+> Per capire ancora meglio il Grundy e il mex guarda le slide "Gioco di Grundy", capire però il valore di (4) = 0
