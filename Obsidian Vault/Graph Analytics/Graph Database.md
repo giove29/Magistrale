@@ -73,5 +73,69 @@ Un Graph DB che combina le caratteristiche di entrambi Property Graph e RDF.
 - Cypher (linguaggio che vedremo di più, più standard).
 - Gremlin
 
-#### Neo4j
+# Neo4j
 ![[Pasted image 20250314125221.png|450]]
+### Pattern
+- (): nodo non identificato.
+- (matrix): nodo identificato dalla variabile *matrix*.
+- (:Movie): nodo non identificato con la label *Movie*.
+- (matrix:Movie:Action): nodo con labels *Movie* e *Action* identificato dalla variabile *matrix*.
+- (matrix:Movie {title:"The Matrix", released: 1997}): nodo con label *Movie*, identificato dalla variabile *matrix* e con proprietà title="The Matrix" e released=1997.
+- --\>: arco non identificato.
+- -\[role]-\>: arco identificato dalla variabile *ruolo*.
+- -\[role:ACTED_IN {roles:\["Neo"]}]-\>: arco identificato con variabile *ruolo*, con label *ACTED_IN* e con proprietà *roles* che contenga la stringa "Neo".
+- 
+### Match
+La clausola di Match permette di ottenere dati dal DB.
+MATCH(p:Person)-\[:Likes]-\>(f:Person)
+![[Pasted image 20250314131015.png]]
+![[Pasted image 20250314130952.png]]
+### Return
+Restituisce il set dei risultati.
+MATCH(p:Person)-\[:Likes]-\>(f:Person)
+RETURN p.name, f.sex
+
+```
+MATCH(n)
+RETURN n, "node" + id(n) + " is" +
+	CASE  WHEN n.title IS NOT NULL THEN " a Movie"
+	      WHEN EXISTS(n.name) THEN " a Person"
+	      ELSE " something unknown"
+	ENDS AS about
+```
+### Optional Match
+Matcha patterns in contrasto con la struttura del grafo. Se non ci sono match, utilizza *NULLs* come bindings.
+MATCH(a:Movie)
+OPTIONAL MATCH (a)<\-\[:WROTE]-(x)
+RETURN a.title, x.name
+
+### WHERE
+Dopo un MATCH, aggiunge condizioni alla richiesta. Può essere semplificato con l'aggiunta di {} nel MATCH.
+MATCH(n)
+WHERE n.name="Peter" XOR (n.age<30 AND n.name = "Tobias")
+RETURN n
+
+Può essere parzialmente riscritto come
+MATCH(n {name="Peter" XOR (age<30 AND name = "Tobias")})
+
+### Variable Length Path Patterns
+Archi dello stesso tipo possono espresse specificando la lunghezza con lower e upper bounds. 
+> Ricorda che ricerca path univoci e non i nodi univocamente!
+- (a)-\[:x\*2]-\>(b)  is equal to  (a)-\[:x]-\>()-\[:x]-\>(b)
+- (a)-\[\*3..5]-\>(b)
+- (a)-\[\*3..]-\>(b)
+- (a)-\[\*..5]-\>(b)
+- (a)-\[\*]-\>(b)   (pericolo da eseguire perché ricerca qualunque percorso)
+- Esempio completo (in questo esempio non è dichiarata la direzione):
+	- MATCH(me)-\[:KNOWS\*1..2]-(remote_friend)
+	- WHERE me.name = "Felipa" RETURN remote_friend.name
+
+### Path Variables
+Assegna path trovati a variabili.
+p = ((a)-\[\*3..5]-\>(b))
+
+### Shortest Path
+Ricerca dello shortest path tra una coppia di nodi, dove è possibile aggiungere filtri tramite la clausola WHERE.
+- shortestPath((x)-\[\*..6]-(y)): funzione di ricerca shortest path in cui è possibile specificare anche upper e lower bounds per la lunghezza del percorso.
+MATCH (m {name:"Martina"}), (o {name: "Olivia"}), p = **shortestPath**((m)-\[\*..15]-(o))
+WHERE length(p)>p RETURN p
