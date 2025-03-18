@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teoria dei Giochi/Giochi Simultanei.md",
+                "file": "Graph Analytics/Graph Database.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Giochi Simultanei"
+              "title": "Graph Database"
             }
           }
         ]
@@ -170,6 +170,7 @@
   },
   "active": "bc3554e8ae456640",
   "lastOpenFiles": [
+    "Teoria dei Giochi/Giochi Simultanei.md",
     "Pasted image 20250317172536.png",
     "Pasted image 20250317172510.png",
     "Pasted image 20250317172414.png",
@@ -177,14 +178,12 @@
     "Pasted image 20250317171400.png",
     "Pasted image 20250314162901.png",
     "Teoria dei Giochi/Giochi Sequenziali.md",
-    "Teoria dei Giochi/Giochi Simultanei.md",
     "Pasted image 20250314153046.png",
     "Pasted image 20250314152806.png",
     "Graph Analytics/Graph Database.md",
     "Pasted image 20250314131015.png",
     "Pasted image 20250314130952.png",
     "Sistemi Complessi/Senza nome.md",
-    "Pasted image 20250314125221.png",
     "Graph Analytics/Graph Importance.md",
     "Graph Analytics/Graph Traversal.md",
     "Teoria dei Giochi/Lavorare con Probabilità.md",

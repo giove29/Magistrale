@@ -84,7 +84,8 @@ Un Graph DB che combina le caratteristiche di entrambi Property Graph e RDF.
 - --\>: arco non identificato.
 - -\[role]-\>: arco identificato dalla variabile *ruolo*.
 - -\[role:ACTED_IN {roles:\["Neo"]}]-\>: arco identificato con variabile *ruolo*, con label *ACTED_IN* e con proprietà *roles* che contenga la stringa "Neo".
-- 
+- (a)--> (b)-->(c)<--(d): ricerca di un path specifico.
+- (a)-->(b), (b)-->(a) ricerca di nodi che matchano certi path.
 ### Match
 La clausola di Match permette di ottenere dati dal DB.
 MATCH(p:Person)-\[:Likes]-\>(f:Person)
@@ -130,6 +131,7 @@ Archi dello stesso tipo possono espresse specificando la lunghezza con lower e u
 	- MATCH(me)-\[:KNOWS\*1..2]-(remote_friend)
 	- WHERE me.name = "Felipa" RETURN remote_friend.name
 
+
 ### Path Variables
 Assegna path trovati a variabili.
 p = ((a)-\[\*3..5]-\>(b))
@@ -139,3 +141,33 @@ Ricerca dello shortest path tra una coppia di nodi, dove è possibile aggiungere
 - shortestPath((x)-\[\*..6]-(y)): funzione di ricerca shortest path in cui è possibile specificare anche upper e lower bounds per la lunghezza del percorso.
 MATCH (m {name:"Martina"}), (o {name: "Olivia"}), p = **shortestPath**((m)-\[\*..15]-(o))
 WHERE length(p)>p RETURN p
+
+### Aggregation
+- **In RETURN clause**:
+	- DISTINCT: rimuove duplicati.
+	- COLLECT: colleziona tutti i valori in una lista.
+	- COUNT
+	- SUM
+	- AVG
+	- MIN
+	- MAX
+	- ...
+	- Esempio:
+		MATCH (me:Person {name: "Ann})--\>(friend:Person)--\>(friend_of_friend:Person)
+		RETURN me.name, count(DISTINCT friend_of_friend), count(friend_of_friend)
+- **In WHIT clause**: Concatena parti di query insieme, facendo il piping dei risultati, permettendo di:
+	- Filtrare sugli aggregati.
+	- Aggregare aggregati.
+	- Limitare ricerche sulla base di proprietà o aggregati.
+	- Esempio:
+		MATCH(p)-\[:PLAYS]-\>(t) WITH t, AVG(p.age) AS a WHERE a < 25 RETURN t
+		MATCH(p) -\[:PLAYS]-\> (t) WITH t, MIN(p.age) AS a RETURN AVG(a)
+
+---
+# High Level View of the Graph Space
+Il Graph Space possiamo dividerlo in due parti:
+1. Graph Database: Tecnologie utilizzate principalmente per la persistenza di grafici online.
+2. Graph Compute Engines: Tecnologie utilizzate principalmente per Graph Analytics offline. Simile a data mining e online analytical processing.
+## Graph Database Management System
+Si tratta di un sistema manageriale online del DB che utilizza metodi CRUD (Create Read Update Delete) per la modellazione di grafi.
+Graph DB sono generalmente costruiti per utilizzi con sistema transazionali, sono normalmente ottimizzati per questo scopo.
