@@ -136,6 +136,9 @@ Archi dello stesso tipo possono espresse specificando la lunghezza con lower e u
 Assegna path trovati a variabili.
 p = ((a)-\[\*3..5]-\>(b))
 
+### Per trovare tutti i path da un punto ad un altro
+MATCH (s:Author {lastname:"Shakespeare"}), (v:Venue {name:"Theatre Royal"}), p=(s)<-\[*..5]->(v) RETURN p
+
 ### Shortest Path
 Ricerca dello shortest path tra una coppia di nodi, dove è possibile aggiungere filtri tramite la clausola WHERE.
 - shortestPath((x)-\[\*..6]-(y)): funzione di ricerca shortest path in cui è possibile specificare anche upper e lower bounds per la lunghezza del percorso.
@@ -166,8 +169,36 @@ WHERE length(p)>p RETURN p
 ---
 # High Level View of the Graph Space
 Il Graph Space possiamo dividerlo in due parti:
-1. Graph Database: Tecnologie utilizzate principalmente per la persistenza di grafici online.
+1. Graph Database: Tecnologie utilizzate principalmente per la persistenza di grafici transazionali online.
 2. Graph Compute Engines: Tecnologie utilizzate principalmente per Graph Analytics offline. Simile a data mining e online analytical processing.
+![[Pasted image 20250319163519.png|500]]
 ## Graph Database Management System
-Si tratta di un sistema manageriale online del DB che utilizza metodi CRUD (Create Read Update Delete) per la modellazione di grafi.
+Si tratta di un sistema manageriale online del DB (come neo4j) che utilizza metodi CRUD (Create Read Update Delete) per la modellazione di grafi.
 Graph DB sono generalmente costruiti per utilizzi con sistema transazionali, sono normalmente ottimizzati per questo scopo.
+**Proprietà di Storage**: i dati sono memorizzati in modo efficiente.
+![[Pasted image 20250319163816.png]]
+**Proprietà di Processing Engine**: i dati sono memorizzati apposta per migliorare le transizioni sul grafo (puntatori liberi).
+![[Pasted image 20250319163842.png|500]]
+
+## Perché scegliere Graph DB?
+**Performance**: i Graph DB offrono query molto più performanti per dati connessi, in confronto con ER e NoSQL DB, soprattutto all'aumentare dei dati. A differenza delle operazioni di JOIN costose, il Graph DB mantiene il costo delle queries efficiente e costante.
+**Flessibilità**: Lo schema libero della natura dei grafi permette un'alta adattabilità del data modeling, permettendo inoltre agli sviluppatori di modellare strutture dinamiche senza l'implemento di costose migrazioni e definizioni.
+Agilità ed Evoluzione dei modelli di dati: 
+- Graph DB permette crescita iterativa con semplici modifiche.
+- Permette di aggiungere relazioni, nodi e labels senza rompere queries esistenti.
+- Evoluzione nel tempo governata da approcci test-driven affidabili.
+
+# Neo4j
+- **OLTP  (Transactional Workloads - Graph Database)**:
+	- Queries a bassa latenza.
+	- Fast Traversal (recommendation engines, fraud detection, social networks).
+- **Graph Data Science**:
+	- Algoritmi avanzati per le communities.
+	- Esegue computazioni esternamente al principale transactional engine per migliori performance.
+- **APOC Procedures**:
+	- Estende le capacità di neo4j con maggiori funzioni analitiche.
+- **Integrazioni con Spark & Hadoop**:
+	- Neo4j è in grado di esportare dati per altri frameworks (Apache Spark, GraphX) per migliori batch processing.
+- **Limitazioni**:
+	- Limiti di memoria.
+	- Batch processing inefficiency.
