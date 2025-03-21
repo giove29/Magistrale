@@ -165,6 +165,21 @@ WHERE length(p)>p RETURN p
 	- Esempio:
 		MATCH(p)-\[:PLAYS]-\>(t) WITH t, AVG(p.age) AS a WHERE a < 25 RETURN t
 		MATCH(p) -\[:PLAYS]-\> (t) WITH t, MIN(p.age) AS a RETURN AVG(a)
+MATCH (d:Driver)-\[:WINS]->(r)
+WITH d, COUNT(r) AS win_count
+RETURN d.name, win_count
+ORDER BY win_count DESC
+
+MATCH (t:Team)<-\[\*]->(r:Race)
+WITH t, COUNT(r) AS wins
+WHERE wins>2
+RETURN t, wins
+
+MATCH (t:Team)<-\[\*]->(r:Race)
+WITH t, COUNT(r) AS wins
+RETURN t, wins
+ORDER BY wins DESC
+LIMIT 1
 
 ---
 # High Level View of the Graph Space
@@ -202,3 +217,6 @@ Agilità ed Evoluzione dei modelli di dati:
 - **Limitazioni**:
 	- Limiti di memoria.
 	- Batch processing inefficiency.
+### APOC
+> Da inserire nei plugin su neo4j
+- call apoc.meta.graph(); -> restituisce il meta grafo, ovvero lo schema, con cui è stato costruito il grafo.
