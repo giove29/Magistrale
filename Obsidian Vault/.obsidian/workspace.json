@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Graph Analytics/Graph Database.md",
+                "file": "Teoria dei Giochi/Giochi Simultanei con più Giocatori.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Graph Database"
+              "title": "Giochi Simultanei con più Giocatori"
             }
           }
         ]
@@ -170,12 +170,16 @@
   },
   "active": "2cf4f5bfdb8ece94",
   "lastOpenFiles": [
+    "Teoria dei Giochi/Giochi Simultanei.md",
+    "Teoria dei Giochi/Best Response Analysis.md",
+    "Teoria dei Giochi/Giochi Simultanei con più Giocatori.md",
+    "Pasted image 20250324171958.png",
+    "Pasted image 20250324171135.png",
+    "Pasted image 20250324170936.png",
+    "Graph Analytics/Graph Database.md",
     "Graph Analytics/Graph Importance.md",
     "Graph Analytics/Graph Traversal.md",
-    "Graph Analytics/Graph Database.md",
     "Graph Analytics/Graph Modeling.md",
-    "Teoria dei Giochi/Best Response Analysis.md",
-    "Teoria dei Giochi/Giochi Simultanei.md",
     "Teoria dei Giochi/Giochi Sequenziali.md",
     "Pasted image 20250321150356.png",
     "Pasted image 20250321145841.png",
@@ -184,9 +188,6 @@
     "Pasted image 20250319163842.png",
     "Pasted image 20250319163816.png",
     "Pasted image 20250319163519.png",
-    "Pasted image 20250317172536.png",
-    "Pasted image 20250317172510.png",
-    "Pasted image 20250317172414.png",
     "Sistemi Complessi/Senza nome.md",
     "Teoria dei Giochi/Lavorare con Probabilità.md",
     "Teoria dei Giochi/Introduzione.md",
