@@ -217,6 +217,28 @@ Agilità ed Evoluzione dei modelli di dati:
 - **Limitazioni**:
 	- Limiti di memoria.
 	- Batch processing inefficiency.
-### APOC
-> Da inserire nei plugin su neo4j
-- call apoc.meta.graph(); -> restituisce il meta grafo, ovvero lo schema, con cui è stato costruito il grafo.
+
+## Index Constraint
+Gli indici aiutano a ottimizzare il processo di ricerca di nodi specifici.
+Nel nostro grafo, se abbiamo la necessità di trovare direttamente i nomi delle Persone, potremmo scegliere di indicizzare tutti i nodi con label "Person", basandoci sul valore del *name*.
+CREATE INDEX ON :Person(name)
+
+Per garantire che i nomi delle Persone siano univoci, possiamo aggiungere un vincolo di unicità.
+CREATE CONSTRAINT ON (p:Person) ASSERT p.name IS UNIQUE
+
+## DELETE e DETACH
+Il comando DELETE permette di rimuovere i nodi che soddisfano determinati requisiti.
+Se si vuole rimuovere anche le relazioni coinvolte, bisogna aggiungere la clausola DETACH.
+MATCH ...
+\[DETACH] DELETE ...
+
+## MERGE
+Guarda su moodle il file "Esercizio-about-movie...."
+Per evitare i duplicati si può usare l'istruzione MERGE.
+**ON CREATE**
+
+**ON MATCH**
+
+## List Comprehension
+Consentono di generare una nuova lista a partire da un'altra, applicando filtri o trasformazioni sugli elementi.
+**\[espressione | variabile IN lista WHERE condizione]**
