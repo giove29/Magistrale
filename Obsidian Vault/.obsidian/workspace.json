@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teoria dei Giochi/4.0 Ordine delle Mosse.md",
+                "file": "Graph Analytics/Graph Database.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4.0 Ordine delle Mosse"
+              "title": "Graph Database"
             }
           }
         ]
@@ -170,8 +170,10 @@
   },
   "active": "2cf4f5bfdb8ece94",
   "lastOpenFiles": [
-    "Teoria dei Giochi/2.0 Giochi Sequenziali.md",
+    "Graph Analytics/Graph Modeling.md",
+    "Graph Analytics/Graph Importance.md",
     "Teoria dei Giochi/4.0 Ordine delle Mosse.md",
+    "Teoria dei Giochi/2.0 Giochi Sequenziali.md",
     "Teoria dei Giochi/3.3 Coordination Games.md",
     "Teoria dei Giochi/3.2 Giochi Simultanei con più Giocatori.md",
     "Teoria dei Giochi/3.1 Best Response Analysis.md",
@@ -187,8 +189,6 @@
     "Pasted image 20250328151247.png",
     "Graph Analytics/Graph Traversal.md",
     "Graph Analytics/Machine Learning & Graph.md",
-    "Graph Analytics/Graph Modeling.md",
-    "Graph Analytics/Graph Importance.md",
     "Graph Analytics/Graph Database.md",
     "Pasted image 20250328143007.png",
     "Pasted image 20250328131208.png",

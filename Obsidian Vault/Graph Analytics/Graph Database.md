@@ -218,14 +218,17 @@ Agilità ed Evoluzione dei modelli di dati:
 	- Limiti di memoria.
 	- Batch processing inefficiency.
 
-## Index Constraint
-Gli indici aiutano a ottimizzare il processo di ricerca di nodi specifici.
-Nel nostro grafo, se abbiamo la necessità di trovare direttamente i nomi delle Persone, potremmo scegliere di indicizzare tutti i nodi con label "Person", basandoci sul valore del *name*.
-CREATE INDEX ON :Person(name)
+## COLLECT 
+In Neo4j la funzione di COLLECT è l'equivalente di GROUP BY nei tradizionali SQL. Viene utilizzato in combinazione con WITH.
+> Ricorda che nel WITH o usi un oggetto o gli attributi tramite AS.
 
-Per garantire che i nomi delle Persone siano univoci, possiamo aggiungere un vincolo di unicità.
-CREATE CONSTRAINT ON (p:Person) ASSERT p.name IS UNIQUE
+MATCH (p:Person)-\[:LIKES]->(f:Food)
+WITH f, COLLECT(p.name) AS fans
+RETURN f.name, fans
 
+MATCH(p:pavimento)
+WITH p.prezzo AS prezzo, COLLECT(p.modello) AS modelli
+RETURN prezzo, modelli ORDER BY prezzo DESC
 ## DELETE e DETACH
 Il comando DELETE permette di rimuovere i nodi che soddisfano determinati requisiti.
 Se si vuole rimuovere anche le relazioni coinvolte, bisogna aggiungere la clausola DETACH.
@@ -233,11 +236,59 @@ MATCH ...
 \[DETACH] DELETE ...
 
 ## MERGE
-Guarda su moodle il file "Esercizio-about-movie...."
-Per evitare i duplicati si può usare l'istruzione MERGE.
+L'operazione di Merge cerca di trovare un nodo nel grafo che corrisponda al pattern specificato.
+Se il nodo **esiste già**, non lo crea, ma lo restituisce o esegue altre operazioni definite da un blocco **ON MATCH**.
+Se il nodo **non esiste**, lo crea e lo inizializza con i parametri forniti nel pattern. Il blocco **ON CREATE** specifica cosa deve accadere se il nodo viene creato (cioè, non esisteva nel grafo e quindi è stato aggiunto).
 **ON CREATE**
+- Specifica le azioni da eseguire **solo se il nodo viene creato per la prima volta**.
+- Usato tipicamente per inizializzare proprietà di un nuovo nodo.
 
 **ON MATCH**
+- Specifica le azioni da eseguire **solo se il nodo esiste già**.
+- Può essere utile, ad esempio, per aggiornare proprietà o incrementare contatori sul nodo esistente.
+
+**Comandi**:
+- SET
+- CREATE
+- REMOVE
+- DELETE
+- MERGE
+
+MERGE (p:Pavimento {modello:"Red4"}) ON
+CREATE SET p.tipo="laminato", p.formato="70x70", p.prezzo=35 
+RETURN p
+
+MERGE ()-\[o:ORDINA]-()
+ON MATCH SET o.mq= CASE
+	WHEN o.mq < 20 THEN 20
+	ELSE o.mq
+END
+
+## CONSTRAINT
+I vincoli in Neo4j servono a garantire l'integrità dei dati e possono essere utilizzati per impedire duplicati, assicurare la presenza di valori o definire relazioni specifiche.
+#### Principali Vincoli
+- **UNIQUE**: assicura che un nodo con una determinata label non abbia valori duplicati su una proprietà specifica. Impedisce l'inserimento di più nomi Persona con lo stesso nome.
+	- CREATE CONSTRAINT unique_persona_nome FOR (p:Persona) REQUIRE p.nome IS UNIQUE;
+	- CREATE CONSTRAINT unique_relazione_nome FOR ()-\[r:Relazione]-() REQUIRE r.nome IS UNIQUE;
+- **IS NOT NULL**: assicura che una determinata proprietà non sia mai NULL per i nodi di un certo tipo. Se provi a creare un nodo Persona senza nome, Neo4j genererà un errore.
+	- CREATE CONSTRAINT persona_nome_not_null FOR (p:Persona) REQUIRE p.nome IS NOT NULL;
+- **IS :: STRING/INTEGER/FLOAT/BOOLEAN**: questi vincoli assicurano che una proprietà abbia sempre un tipo specifico come stringa, intero o boolean. Se si inserisce un valore che non rispetta il tipo del vincolo, Neo4j restituirà un errore.
+	- CREATE CONSTRAINT persona_nome_string FOR (p:Persona) REQUIRE p.nome IS ::  STRING;
+
+
+> [!NOTE] Eliminare o mostrare Vincoli
+> DROP CONSTRAINT nome_vincolo;
+> SHOW CONSTRAINTS;
+
+## CREATE INDEX
+Gli indici in Neo4j migliorano le prestazioni delle query accelerando la ricerca di nodi e relazioni basata su proprietà specifiche.
+#### Tipi Indici
+- **Indice Singolo**: migliora la ricerca su una proprietà. Velocizza le query che cercano nodi Persona in base a nome.
+	- CREATE INDEX idx_persona_nome FOR (p:Persona) ON (p.nome);
+	- Query ottimizzata: MATCH (p:Persona {nome:"Alice"}) RETURN p;
+- **Indice Composito**: migliora la ricerca su più proprietà. Ottimizza le ricerche su entrambe le proprietà nome e eta.
+	- CREATE INDEX idx_persona_nome_eta FOR (p:Persona) ON (p.nome, p.eta);
+	- Perfetta se si applicano spesso query come: MATCH (p:Persona {nome:"Alice", eta:30}) RETURN p;
 
 ## List Comprehension
 Consentono di generare una nuova lista a partire da un'altra, applicando filtri o trasformazioni sugli elementi.
