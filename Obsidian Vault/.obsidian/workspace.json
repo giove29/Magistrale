@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Graph Analytics/Graph Database.md",
+                "file": "Graph Analytics/1.0 Graph Traversal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Graph Database"
+              "title": "1.0 Graph Traversal"
             }
           }
         ]
@@ -170,8 +170,23 @@
   },
   "active": "2cf4f5bfdb8ece94",
   "lastOpenFiles": [
-    "Graph Analytics/Graph Modeling.md",
-    "Graph Analytics/Graph Importance.md",
+    "Pasted image 20250401211019.png",
+    "Pasted image 20250401210610.png",
+    "Pasted image 20250401205333.png",
+    "Pasted image 20250401205216.png",
+    "Pasted image 20250401205141.png",
+    "WhatsApp Image 2025-04-01 at 20.34.22.jpeg",
+    "Pasted image 20250401203311.png",
+    "Pasted image 20250401203129.png",
+    "Pasted image 20250401203104.png",
+    "Pasted image 20250401202452.png",
+    "Pasted image 20250401202328.png",
+    "Graph Analytics/2.0 Graph Importance.md",
+    "Graph Analytics/1.0 Graph Traversal.md",
+    "Graph Analytics/4.0 Machine Learning & Graph.md",
+    "Graph Analytics/3.1 APOC.md",
+    "Graph Analytics/4.1 Graph Modeling.md",
+    "Graph Analytics/3.0 Graph Database.md",
     "Teoria dei Giochi/4.0 Ordine delle Mosse.md",
     "Teoria dei Giochi/2.0 Giochi Sequenziali.md",
     "Teoria dei Giochi/3.3 Coordination Games.md",
@@ -180,20 +195,6 @@
     "Teoria dei Giochi/3.0 Giochi Simultanei.md",
     "Teoria dei Giochi/1.1 Lavorare con Probabilità.md",
     "Teoria dei Giochi/1.0 Introduzione.md",
-    "Pasted image 20250328160252.png",
-    "Pasted image 20250328155257.png",
-    "Pasted image 20250328154726.png",
-    "Pasted image 20250328153712.png",
-    "Pasted image 20250328152715.png",
-    "Pasted image 20250328151939.png",
-    "Pasted image 20250328151247.png",
-    "Graph Analytics/Graph Traversal.md",
-    "Graph Analytics/Machine Learning & Graph.md",
-    "Graph Analytics/Graph Database.md",
-    "Pasted image 20250328143007.png",
-    "Pasted image 20250328131208.png",
-    "Pasted image 20250328131152.png",
-    "Graph Analytics/APOC.md",
     "Senza nome",
     "Senza nome.md",
     "Sistemi Complessi/Senza nome.md",
