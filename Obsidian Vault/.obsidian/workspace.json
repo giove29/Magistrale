@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Graph Analytics/1.0 Graph Traversal.md",
+                "file": "Graph Analytics/4.2 Graph Data Engineering.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.0 Graph Traversal"
+              "title": "4.2 Graph Data Engineering"
             }
           }
         ]
@@ -170,20 +170,21 @@
   },
   "active": "2cf4f5bfdb8ece94",
   "lastOpenFiles": [
+    "Pasted image 20250402120505.png",
+    "Pasted image 20250402115745.png",
+    "Pasted image 20250402115322.png",
+    "Pasted image 20250402111621.png",
+    "Pasted image 20250402111542.png",
+    "Pasted image 20250402110352.png",
+    "Pasted image 20250402110238.png",
+    "Graph Analytics/4.0 Machine Learning & Graph.md",
+    "Graph Analytics/4.2 Graph Data Engineering.md",
+    "Graph Analytics/1.0 Graph Traversal.md",
     "Pasted image 20250401211019.png",
     "Pasted image 20250401210610.png",
     "Pasted image 20250401205333.png",
     "Pasted image 20250401205216.png",
-    "Pasted image 20250401205141.png",
-    "WhatsApp Image 2025-04-01 at 20.34.22.jpeg",
-    "Pasted image 20250401203311.png",
-    "Pasted image 20250401203129.png",
-    "Pasted image 20250401203104.png",
-    "Pasted image 20250401202452.png",
-    "Pasted image 20250401202328.png",
     "Graph Analytics/2.0 Graph Importance.md",
-    "Graph Analytics/1.0 Graph Traversal.md",
-    "Graph Analytics/4.0 Machine Learning & Graph.md",
     "Graph Analytics/3.1 APOC.md",
     "Graph Analytics/4.1 Graph Modeling.md",
     "Graph Analytics/3.0 Graph Database.md",
