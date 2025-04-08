@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Graph Analytics/3.0 Graph Database.md",
+                "file": "Graph Analytics/4.2 Graph Data Engineering.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.0 Graph Database"
+              "title": "4.2 Graph Data Engineering"
             }
           }
         ]
@@ -170,11 +170,16 @@
   },
   "active": "2cf4f5bfdb8ece94",
   "lastOpenFiles": [
+    "Pasted image 20250408132232.png",
+    "Pasted image 20250408130916.png",
+    "Pasted image 20250408130444.png",
+    "Graph Analytics/3.0 Graph Database.md",
+    "Graph Analytics/2.0 Graph Importance.md",
+    "Graph Analytics/1.0 Graph Traversal.md",
+    "Graph Analytics/3.1 APOC.md",
     "Graph Analytics/4.2 Graph Data Engineering.md",
     "Graph Analytics/4.1 Graph Modeling.md",
     "Graph Analytics/4.0 Machine Learning & Graph.md",
-    "Graph Analytics/3.1 APOC.md",
-    "Graph Analytics/3.0 Graph Database.md",
     "Pasted image 20250402120505.png",
     "Pasted image 20250402115745.png",
     "Pasted image 20250402115322.png",
@@ -182,11 +187,7 @@
     "Pasted image 20250402111542.png",
     "Pasted image 20250402110352.png",
     "Pasted image 20250402110238.png",
-    "Graph Analytics/1.0 Graph Traversal.md",
     "Pasted image 20250401211019.png",
-    "Pasted image 20250401210610.png",
-    "Pasted image 20250401205333.png",
-    "Graph Analytics/2.0 Graph Importance.md",
     "Teoria dei Giochi/4.0 Ordine delle Mosse.md",
     "Teoria dei Giochi/2.0 Giochi Sequenziali.md",
     "Teoria dei Giochi/3.3 Coordination Games.md",
