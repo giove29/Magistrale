@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Graph Analytics/4.2 Graph Data Engineering.md",
+                "file": "Graph Analytics/1.0 Graph Traversal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4.2 Graph Data Engineering"
+              "title": "1.0 Graph Traversal"
             }
           }
         ]
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Esplora risorse"
             }
           },
           {
@@ -160,34 +160,33 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false
     }
   },
   "active": "2cf4f5bfdb8ece94",
   "lastOpenFiles": [
+    "Graph Analytics/4.2 Graph Data Engineering.md",
+    "Pasted image 20250408161112.png",
+    "Pasted image 20250408160101.png",
+    "Pasted image 20250408154649.png",
+    "Graph Analytics/1.0 Graph Traversal.md",
     "Pasted image 20250408132232.png",
     "Pasted image 20250408130916.png",
     "Pasted image 20250408130444.png",
     "Graph Analytics/3.0 Graph Database.md",
     "Graph Analytics/2.0 Graph Importance.md",
-    "Graph Analytics/1.0 Graph Traversal.md",
     "Graph Analytics/3.1 APOC.md",
-    "Graph Analytics/4.2 Graph Data Engineering.md",
     "Graph Analytics/4.1 Graph Modeling.md",
     "Graph Analytics/4.0 Machine Learning & Graph.md",
     "Pasted image 20250402120505.png",
     "Pasted image 20250402115745.png",
     "Pasted image 20250402115322.png",
     "Pasted image 20250402111621.png",
-    "Pasted image 20250402111542.png",
-    "Pasted image 20250402110352.png",
-    "Pasted image 20250402110238.png",
-    "Pasted image 20250401211019.png",
     "Teoria dei Giochi/4.0 Ordine delle Mosse.md",
     "Teoria dei Giochi/2.0 Giochi Sequenziali.md",
     "Teoria dei Giochi/3.3 Coordination Games.md",
