@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Graph Analytics/4.2 Graph Data Engineering.md",
+                "file": "Graph Analytics/4.3 Graph in ML Applications.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4.2 Graph Data Engineering"
+              "title": "4.3 Graph in ML Applications"
             }
           }
         ]
@@ -170,24 +170,25 @@
   },
   "active": "2cf4f5bfdb8ece94",
   "lastOpenFiles": [
+    "Pasted image 20250418185153.png",
+    "Pasted image 20250418184935.png",
+    "Pasted image 20250418170552.png",
+    "Pasted image 20250418165612.png",
+    "Graph Analytics/4.0 Machine Learning & Graph.md",
+    "Graph Analytics/4.3 Graph in ML Applications.md",
+    "Pasted image 20250418164447.png",
+    "Pasted image 20250418164331.png",
+    "Pasted image 20250418163556.png",
+    "Pasted image 20250418161459.png",
+    "Graph Analytics/4.2 Graph Data Engineering.md",
     "Pasted image 20250417191102.png",
     "Pasted image 20250417190621.png",
     "Pasted image 20250417184000.png",
-    "Pasted image 20250417182602.png",
-    "Pasted image 20250417182523.png",
-    "Pasted image 20250417175518.png",
-    "Pasted image 20250417175420.png",
     "Graph Analytics/3.0 Graph Database.md",
     "Graph Analytics/3.1 APOC.md",
     "Graph Analytics/1.0 Graph Traversal.md",
     "Graph Analytics/2.0 Graph Importance.md",
-    "Graph Analytics/4.2 Graph Data Engineering.md",
-    "Pasted image 20250408161112.png",
-    "Pasted image 20250408160101.png",
-    "Pasted image 20250408154649.png",
-    "Pasted image 20250408132232.png",
     "Graph Analytics/4.1 Graph Modeling.md",
-    "Graph Analytics/4.0 Machine Learning & Graph.md",
     "Teoria dei Giochi/4.0 Ordine delle Mosse.md",
     "Teoria dei Giochi/2.0 Giochi Sequenziali.md",
     "Teoria dei Giochi/3.3 Coordination Games.md",
