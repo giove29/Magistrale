@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Esplora risorse"
+              "title": "Files"
             }
           },
           {
@@ -160,36 +160,36 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Apri selezione rapida": false,
-      "graph:Apri vista grafo": false,
-      "canvas:Crea nuova lavagna": false,
-      "daily-notes:Apri nota del giorno": false,
-      "templates:Inserisci modello": false,
-      "command-palette:Apri riquadro comandi": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
   "active": "2cf4f5bfdb8ece94",
   "lastOpenFiles": [
+    "Teoria dei Giochi/5.0 Information Sets e Subgames.md",
+    "Pasted image 20250422133634.png",
+    "Pasted image 20250422125436.png",
+    "Pasted image 20250422124720.png",
+    "Pasted image 20250422124609.png",
+    "Teoria dei Giochi/4.0 Ordine delle Mosse.md",
+    "Graph Analytics/4.3 Graph in ML Applications.md",
     "Pasted image 20250418185153.png",
     "Pasted image 20250418184935.png",
     "Pasted image 20250418170552.png",
     "Pasted image 20250418165612.png",
     "Graph Analytics/4.0 Machine Learning & Graph.md",
-    "Graph Analytics/4.3 Graph in ML Applications.md",
     "Pasted image 20250418164447.png",
     "Pasted image 20250418164331.png",
-    "Pasted image 20250418163556.png",
-    "Pasted image 20250418161459.png",
     "Graph Analytics/4.2 Graph Data Engineering.md",
-    "Pasted image 20250417191102.png",
-    "Pasted image 20250417190621.png",
-    "Pasted image 20250417184000.png",
     "Graph Analytics/3.0 Graph Database.md",
     "Graph Analytics/3.1 APOC.md",
     "Graph Analytics/1.0 Graph Traversal.md",
     "Graph Analytics/2.0 Graph Importance.md",
     "Graph Analytics/4.1 Graph Modeling.md",
-    "Teoria dei Giochi/4.0 Ordine delle Mosse.md",
     "Teoria dei Giochi/2.0 Giochi Sequenziali.md",
     "Teoria dei Giochi/3.3 Coordination Games.md",
     "Teoria dei Giochi/3.2 Giochi Simultanei con più Giocatori.md",
