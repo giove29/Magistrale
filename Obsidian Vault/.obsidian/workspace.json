@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d389438648aebd99",
+        "id": "271fd5123e45e503",
         "type": "tabs",
         "children": [
           {
-            "id": "2cf4f5bfdb8ece94",
+            "id": "15e45528de561fcd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Graph Analytics/4.3 Graph in ML Applications.md",
+                "file": "Teoria dei Giochi/5.2 SPE con Informazione Imperfetta.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4.3 Graph in ML Applications"
+              "title": "5.2 SPE con Informazione Imperfetta"
             }
           }
         ]
@@ -168,23 +168,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2cf4f5bfdb8ece94",
+  "active": "15e45528de561fcd",
   "lastOpenFiles": [
-    "Pasted image 20250423120409.png",
-    "Pasted image 20250423120112.png",
-    "Pasted image 20250423115651.png",
-    "Pasted image 20250423114927.png",
-    "Pasted image 20250423113038.png",
-    "Pasted image 20250423105412.png",
-    "Pasted image 20250423104308.png",
-    "Pasted image 20250423104256.png",
-    "Pasted image 20250423104045.png",
-    "Pasted image 20250423103557.png",
-    "Pasted image 20250423102407.png",
+    "Pasted image 20250428172645.png",
+    "Pasted image 20250428172623.png",
+    "Pasted image 20250428172450.png",
+    "Pasted image 20250428172357.png",
+    "Pasted image 20250428172035.png",
+    "Pasted image 20250428172017.png",
+    "Pasted image 20250428171850.png",
+    "Teoria dei Giochi/5.2 SPE con Informazione Imperfetta.md",
+    "Teoria dei Giochi/5.1 Giochi Sequenziali con Tabella dei Payoff.md",
+    "Pasted image 20250428165420.png",
+    "Pasted image 20250428165410.png",
+    "Pasted image 20250428163537.png",
+    "Pasted image 20250428161648.png",
+    "Teoria dei Giochi/5.0 Information Sets e Subgames.md",
+    "Graph Analytics/4.3 Graph in ML Applications.md",
     "Graph Analytics/4.2 Graph Data Engineering.md",
     "Graph Analytics/4.1 Graph Modeling.md",
-    "Graph Analytics/4.3 Graph in ML Applications.md",
-    "Teoria dei Giochi/5.0 Information Sets e Subgames.md",
     "Teoria dei Giochi/4.0 Ordine delle Mosse.md",
     "Graph Analytics/4.0 Machine Learning & Graph.md",
     "Graph Analytics/3.0 Graph Database.md",
