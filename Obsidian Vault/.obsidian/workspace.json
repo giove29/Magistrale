@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teoria dei Giochi/5.2 SPE con Informazione Imperfetta.md",
+                "file": "Teoria dei Giochi/6.0 SPE con Strategie Miste nei Giochi Simultanei.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5.2 SPE con Informazione Imperfetta"
+              "title": "6.0 SPE con Strategie Miste nei Giochi Simultanei"
             }
           }
         ]
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Esplora risorse"
             }
           },
           {
@@ -160,29 +160,30 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false
     }
   },
   "active": "15e45528de561fcd",
   "lastOpenFiles": [
+    "Pasted image 20250506170344.png",
+    "Pasted image 20250506170244.png",
+    "Pasted image 20250506165854.png",
+    "Pasted image 20250505162509.png",
+    "Teoria dei Giochi/5.2 SPE con Informazione Imperfetta.md",
+    "Teoria dei Giochi/6.0 SPE con Strategie Miste nei Giochi Simultanei.md",
+    "Pasted image 20250505160844.png",
     "Pasted image 20250428172645.png",
     "Pasted image 20250428172623.png",
     "Pasted image 20250428172450.png",
     "Pasted image 20250428172357.png",
     "Pasted image 20250428172035.png",
     "Pasted image 20250428172017.png",
-    "Pasted image 20250428171850.png",
-    "Teoria dei Giochi/5.2 SPE con Informazione Imperfetta.md",
     "Teoria dei Giochi/5.1 Giochi Sequenziali con Tabella dei Payoff.md",
-    "Pasted image 20250428165420.png",
-    "Pasted image 20250428165410.png",
-    "Pasted image 20250428163537.png",
-    "Pasted image 20250428161648.png",
     "Teoria dei Giochi/5.0 Information Sets e Subgames.md",
     "Graph Analytics/4.3 Graph in ML Applications.md",
     "Graph Analytics/4.2 Graph Data Engineering.md",
