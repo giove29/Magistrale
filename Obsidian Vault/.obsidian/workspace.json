@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teoria dei Giochi/8.0 Giochi Ripetuti.md",
+                "file": "Teoria dei Giochi/8.1 Giochi Ripetuti con Lunghezza Sconosciuta.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "8.0 Giochi Ripetuti"
+              "title": "8.1 Giochi Ripetuti con Lunghezza Sconosciuta"
             }
           }
         ]
@@ -170,19 +170,20 @@
   },
   "active": "d17303dd47d5f44c",
   "lastOpenFiles": [
+    "Pasted image 20250526180436.png",
+    "Pasted image 20250526180433.png",
+    "Pasted image 20250526180008.png",
+    "Teoria dei Giochi/8.0 Giochi Ripetuti.md",
+    "Teoria dei Giochi/8.1 Giochi Ripetuti con Lunghezza Sconosciuta.md",
+    "Pasted image 20250526171718.png",
+    "Pasted image 20250526171605.png",
+    "Pasted image 20250526161422.png",
     "Pasted image 20250526141317.png",
     "Pasted image 20250526135527.png",
     "Pasted image 20250526135215.png",
     "Pasted image 20250526134809.png",
     "Pasted image 20250526134005.png",
     "Teoria dei Giochi/7.0 Giochi con Informazione Imperfetta e Misti.md",
-    "Teoria dei Giochi/8.0 Giochi Ripetuti.md",
-    "Pasted image 20250526133608.png",
-    "Pasted image 20250526131922.png",
-    "Pasted image 20250523170830.png",
-    "Pasted image 20250523170000.png",
-    "Pasted image 20250523165949.png",
-    "Pasted image 20250523150711.png",
     "Teoria dei Giochi/6.2 Strategie Miste, 3 o più Strategie.md",
     "Teoria dei Giochi/6.0 SPE con Strategie Miste nei Giochi Simultanei.md",
     "Teoria dei Giochi/6.1 Effetti dei Payoff.md",
@@ -206,7 +207,6 @@
     "Teoria dei Giochi/1.1 Lavorare con Probabilità.md",
     "Teoria dei Giochi/1.0 Introduzione.md",
     "Senza nome",
-    "Senza nome.md",
     "Sicurezza Informatica",
     "Sistemi Complessi",
     "Graph Analytics",
