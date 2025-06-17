@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Teoria dei Giochi/8.1 Giochi Ripetuti con Lunghezza Sconosciuta.md",
+                "file": "Graph Analytics/4.3 Graph in ML Applications.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "8.1 Giochi Ripetuti con Lunghezza Sconosciuta"
+              "title": "4.3 Graph in ML Applications"
             }
           }
         ]
@@ -170,19 +170,24 @@
   },
   "active": "d17303dd47d5f44c",
   "lastOpenFiles": [
+    "Graph Analytics/4.0 Machine Learning & Graph.md",
+    "Graph Analytics/4.1 Graph Modeling.md",
+    "Graph Analytics/4.3 Graph in ML Applications.md",
+    "Graph Analytics/4.2 Graph Data Engineering.md",
+    "Pasted image 20250617142733.png",
+    "Pasted image 20250617141944.png",
+    "Pasted image 20250617141028.png",
+    "Pasted image 20250617132841.png",
+    "Graph Analytics/3.1 APOC.md",
+    "Graph Analytics/3.0 Graph Database.md",
+    "Teoria dei Giochi/8.1 Giochi Ripetuti con Lunghezza Sconosciuta.md",
     "Pasted image 20250526180436.png",
     "Pasted image 20250526180433.png",
     "Pasted image 20250526180008.png",
     "Teoria dei Giochi/8.0 Giochi Ripetuti.md",
-    "Teoria dei Giochi/8.1 Giochi Ripetuti con Lunghezza Sconosciuta.md",
     "Pasted image 20250526171718.png",
     "Pasted image 20250526171605.png",
     "Pasted image 20250526161422.png",
-    "Pasted image 20250526141317.png",
-    "Pasted image 20250526135527.png",
-    "Pasted image 20250526135215.png",
-    "Pasted image 20250526134809.png",
-    "Pasted image 20250526134005.png",
     "Teoria dei Giochi/7.0 Giochi con Informazione Imperfetta e Misti.md",
     "Teoria dei Giochi/6.2 Strategie Miste, 3 o più Strategie.md",
     "Teoria dei Giochi/6.0 SPE con Strategie Miste nei Giochi Simultanei.md",
@@ -190,13 +195,7 @@
     "Teoria dei Giochi/5.2 SPE con Informazione Imperfetta.md",
     "Teoria dei Giochi/5.1 Giochi Sequenziali con Tabella dei Payoff.md",
     "Teoria dei Giochi/5.0 Information Sets e Subgames.md",
-    "Graph Analytics/4.3 Graph in ML Applications.md",
-    "Graph Analytics/4.2 Graph Data Engineering.md",
-    "Graph Analytics/4.1 Graph Modeling.md",
     "Teoria dei Giochi/4.0 Ordine delle Mosse.md",
-    "Graph Analytics/4.0 Machine Learning & Graph.md",
-    "Graph Analytics/3.0 Graph Database.md",
-    "Graph Analytics/3.1 APOC.md",
     "Graph Analytics/1.0 Graph Traversal.md",
     "Graph Analytics/2.0 Graph Importance.md",
     "Teoria dei Giochi/2.0 Giochi Sequenziali.md",
